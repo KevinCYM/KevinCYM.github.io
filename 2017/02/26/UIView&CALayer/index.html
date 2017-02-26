@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+       | KevinCym的博客 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="KevinCym">
+    
+    
+
+    <meta name="description" content="##1.UIView可以响应事件，Layer不能
+#####首先来看看它们的继承结构：
+UIView的继承结构为:UIResponder:NSObject
+可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
+CALayer的继承结构为：NSObject
+CALayer的直接父类是NSObject，所以CAL">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" | KevinCym的博客">
+<meta property="og:url" content="http://yoursite.com/2017/02/26/UIView&CALayer/index.html">
+<meta property="og:site_name" content="KevinCym的博客">
+<meta property="og:description" content="##1.UIView可以响应事件，Layer不能
+#####首先来看看它们的继承结构：
+UIView的继承结构为:UIResponder:NSObject
+可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
+CALayer的继承结构为：NSObject
+CALayer的直接父类是NSObject，所以CAL">
+<meta property="og:image" content="http://olz4nsyi0.bkt.clouddn.com/1.png">
+<meta property="og:updated_time" content="2017-02-26T10:21:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content=" | KevinCym的博客">
+<meta name="twitter:description" content="##1.UIView可以响应事件，Layer不能
+#####首先来看看它们的继承结构：
+UIView的继承结构为:UIResponder:NSObject
+可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
+CALayer的继承结构为：NSObject
+CALayer的直接父类是NSObject，所以CAL">
+<meta name="twitter:image" content="http://olz4nsyi0.bkt.clouddn.com/1.png">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">KevinCym的博客</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title"></h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2017-02-26" class="post-meta__date date">2017-02-26</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>##1.UIView可以响应事件，Layer不能</p>
+<p>#####首先来看看它们的继承结构：</p>
+<p><strong>UIView</strong>的继承结构为:UIResponder:NSObject</p>
+<p>可以看出来，UIView的直接父类是<code>UIResponder</code>，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;</p>
+<p><strong>CALayer</strong>的继承结构为：NSObject</p>
+<p>CALayer的直接父类是<code>NSObject</code>，所以CALayer不能响应用户事件.</p>
+<p>#####再来看看它们所属的框架</p>
+<p><strong>UIView</strong>是在<code>UIKit.framework</code>中定义的，而UIKit主要是用来构建用户界面并且是可以响应事件的；</p>
+<p><strong>CALayer</strong>是在<code>QuartzCore.framework</code>中定义的，CALayer作为一个低级的可以承载绘制内容的底层对象出现在该框架中。</p>
+<p>##2.UIView和CALayer的frame</p>
+<p>先来做个测试：</p>
+<p>自定义两个类，<code>CymView</code> 继承 <code>UIView</code>,<code>CymLayer</code>继承<code>CALayer</code></p>
+<p>然后在<code>CymView</code>中重写方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">+ (Class)layerClass</div><div class="line">&#123;</div><div class="line">    return [CymLayer class];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setFrame:(CGRect)frame</div><div class="line">&#123;</div><div class="line">    [super setFrame:frame];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setCenter:(CGPoint)center</div><div class="line">&#123;</div><div class="line">    [super setCenter:center];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setBounds:(CGRect)bounds</div><div class="line">&#123;</div><div class="line">    [super setBounds:bounds];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在<code>CymLayer</code>中也重现上述方法，把<code>setCenter</code>改成<code>setPosition</code></p>
+<p>在两个类的初始化方法中都打一个断点，运行，可看到如下结果：<br><img src="http://olz4nsyi0.bkt.clouddn.com/1.png" alt="1"></p>
+<p>我们可以看到在<code>[CymView alloc]initWithFrame]</code>的时候View调用了私有方法<code>_createLayerWithFrame</code>来创建Layer</p>
+<p>然后在创建<code>CymView</code>的时候在两个类中与<code>frame</code>相关的所有方法中都加上断点，运行可以看到方法的调用顺序是这样的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[UIView _createLayerWithFrame]</div><div class="line">[Layer setBounds:bounds]</div><div class="line">[UIView setFrame：Frame]</div><div class="line">[Layer setFrame:frame]</div><div class="line">[Layer setPosition:position]</div><div class="line">[Layer setBounds:bounds]</div></pre></td></tr></table></figure>
+<p>可以看出，在View创建的过程中只调用了Layer设置尺寸和位置的方法，并没有调用View的<code>setCenter</code>和<code>setBounds</code></p>
+<p>这个时候，我们来修改view的<code>bounds.size</code>和<code>bounds.orgin</code>,同样也只会调用Layer的方法，事实胜于雄辩，从这个例子中我们可以说View的Center和Bounds是直接返回Layer对应的Position和Bounds.</p>
+<p>##3.UIView是对显示内容的管理，CALayer是对显示内容的绘制</p>
+<p>在<code>CymView</code>和<code>CymLayer</code>中分别重写父类的方法,然后在下面两个方法加上断点</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[UIView drawRect:rect]; </div><div class="line"></div><div class="line">[CALayer display];</div></pre></td></tr></table></figure>
+<p>执行过后我们可以发现Xcode左侧的方法堆栈中有这样一行</p>
+<p><code>[UIView(CALayerDelegate) drawLayer:inContext:]</code></p>
+<p>也就是说，<code>UIView</code>是<code>CALayer</code>的CALayerDelegate.</p>
+<p>##4.ios中做动画时，修改非RootLayer的位置,背景色等属性的时候会默认产生隐式动画，而修改UIView则不会</p>
+<p>对于每一个 UIView 都有一个 layer,把这个 layer 且称作RootLayer,而不是 View 的根 Layer的叫做 非 RootLayer。我们对UIView的属性修改时时不会产生默认动画，而对单独 layer属性直接修改会，这个默认动画的时间缺省值是0.25s.<br>在 Core Animation 编程指南的 “How to Animate Layer-Backed Views” 中，对为什么会这样做出了一个解释：</p>
+<blockquote>
+<p>UIView 默认情况下禁止了 layer 动画，但是在 animation block 中又重新启用了它们</p>
+</blockquote>
+<p>是因为任何可动画的 layer 属性改变时，layer 都会寻找并运行合适的 ‘action’ 来实行这个改变。在 Core Animation 的专业术语中就把这样的动画统称为动作 (action，或者 CAAction).</p>
+<p>ayer 通过向它的 delegate 发送 actionForLayer:forKey: 消息来询问提供一个对应属性变化的 action。delegate 可以通过返回以下三者之一来进行响应：</p>
+<blockquote>
+<ol>
+<li>它可以返回一个动作对象，这种情况下 layer 将使用这个动作。</li>
+<li>它可以返回一个 nil， 这样 layer 就会到其他地方继续寻找。</li>
+<li>它可以返回一个 NSNull 对象，告诉 layer 这里不需要执行一个动作，搜索也会就此停止。</li>
+</ol>
+</blockquote>
+<p>当 layer 在背后支持一个 view 的时候，view 就是它的 delegate；</p>
+<p>##总结</p>
+<ul>
+<li><p>每个 UIView 内部都有一个 CALayer 在背后提供内容的绘制和显示，并且 UIView 的尺寸样式都由内部的 Layer 所提供。两者都有树状层级结构，layer 内部有 SubLayers，View 内部有 SubViews.但是 Layer 比 View 多了个AnchorPoint</p>
+</li>
+<li><p>在 View显示的时候，UIView 做为 Layer 的 CALayerDelegate,View 的显示内容由内部的 CALayer 的 display</p>
+</li>
+<li><p>CALayer 是默认修改属性支持隐式动画的，在给 UIView 的 Layer 做动画的时候，View 作为 Layer 的代理，Layer 通过 actionForLayer:forKey:向 View请求相应的 action(动画行为)</p>
+</li>
+<li><p>layer 内部维护着三分 layer tree,分别是 presentLayer Tree(动画树),modeLayer Tree(模型树), Render Tree (渲染树),在做 iOS动画的时候，我们修改动画的属性，在动画的其实是 Layer 的 presentLayer的属性值,而最终展示在界面上的其实是提供 View的modelLayer</p>
+</li>
+<li><p>两者最明显的区别是 View可以接受并处理事件，而 Layer 不可以.</p>
+</li>
+</ul>
+<p>####参考链接<br><a href="http://www.jianshu.com/p/079e5cf0f014" target="_blank" rel="external">http://www.jianshu.com/p/079e5cf0f014</a>  </p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
