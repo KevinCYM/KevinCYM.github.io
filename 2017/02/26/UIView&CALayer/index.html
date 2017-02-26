@@ -16,32 +16,26 @@
     
     
 
-    <meta name="description" content="##1.UIView可以响应事件，Layer不能
-#####首先来看看它们的继承结构：
-UIView的继承结构为:UIResponder:NSObject
+    <meta name="description" content="1.UIView可以响应事件，Layer不能首先来看看它们的继承结构：UIView的继承结构为:UIResponder:NSObject
 可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
 CALayer的继承结构为：NSObject
-CALayer的直接父类是NSObject，所以CAL">
+CALayer的直接父类是NSObject，所以CALayer不能响应用">
 <meta property="og:type" content="article">
 <meta property="og:title" content="UIView & CALayer | KevinCym的博客">
 <meta property="og:url" content="http://yoursite.com/2017/02/26/UIView&CALayer/index.html">
 <meta property="og:site_name" content="KevinCym的博客">
-<meta property="og:description" content="##1.UIView可以响应事件，Layer不能
-#####首先来看看它们的继承结构：
-UIView的继承结构为:UIResponder:NSObject
+<meta property="og:description" content="1.UIView可以响应事件，Layer不能首先来看看它们的继承结构：UIView的继承结构为:UIResponder:NSObject
 可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
 CALayer的继承结构为：NSObject
-CALayer的直接父类是NSObject，所以CAL">
+CALayer的直接父类是NSObject，所以CALayer不能响应用">
 <meta property="og:image" content="http://olz4nsyi0.bkt.clouddn.com/1.png">
-<meta property="og:updated_time" content="2017-02-26T10:24:35.000Z">
+<meta property="og:updated_time" content="2017-02-26T10:26:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UIView & CALayer | KevinCym的博客">
-<meta name="twitter:description" content="##1.UIView可以响应事件，Layer不能
-#####首先来看看它们的继承结构：
-UIView的继承结构为:UIResponder:NSObject
+<meta name="twitter:description" content="1.UIView可以响应事件，Layer不能首先来看看它们的继承结构：UIView的继承结构为:UIResponder:NSObject
 可以看出来，UIView的直接父类是UIResponder，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;
 CALayer的继承结构为：NSObject
-CALayer的直接父类是NSObject，所以CAL">
+CALayer的直接父类是NSObject，所以CALayer不能响应用">
 <meta name="twitter:image" content="http://olz4nsyi0.bkt.clouddn.com/1.png">
     
     
@@ -198,17 +192,13 @@ classes that you can use:
   </header>
 
   <section id="post-content" class="article-content post">
-    <p>##1.UIView可以响应事件，Layer不能</p>
-<p>#####首先来看看它们的继承结构：</p>
-<p><strong>UIView</strong>的继承结构为:UIResponder:NSObject</p>
+    <h2 id="1-UIView可以响应事件，Layer不能"><a href="#1-UIView可以响应事件，Layer不能" class="headerlink" title="1.UIView可以响应事件，Layer不能"></a>1.UIView可以响应事件，Layer不能</h2><h5 id="首先来看看它们的继承结构："><a href="#首先来看看它们的继承结构：" class="headerlink" title="首先来看看它们的继承结构："></a>首先来看看它们的继承结构：</h5><p><strong>UIView</strong>的继承结构为:UIResponder:NSObject</p>
 <p>可以看出来，UIView的直接父类是<code>UIResponder</code>，而UIResponder是用来响应事件的，换而言之，UIView可以响应用户事件;</p>
 <p><strong>CALayer</strong>的继承结构为：NSObject</p>
 <p>CALayer的直接父类是<code>NSObject</code>，所以CALayer不能响应用户事件.</p>
-<p>#####再来看看它们所属的框架</p>
-<p><strong>UIView</strong>是在<code>UIKit.framework</code>中定义的，而UIKit主要是用来构建用户界面并且是可以响应事件的；</p>
+<h5 id="再来看看它们所属的框架"><a href="#再来看看它们所属的框架" class="headerlink" title="再来看看它们所属的框架"></a>再来看看它们所属的框架</h5><p><strong>UIView</strong>是在<code>UIKit.framework</code>中定义的，而UIKit主要是用来构建用户界面并且是可以响应事件的；</p>
 <p><strong>CALayer</strong>是在<code>QuartzCore.framework</code>中定义的，CALayer作为一个低级的可以承载绘制内容的底层对象出现在该框架中。</p>
-<p>##2.UIView和CALayer的frame</p>
-<p>先来做个测试：</p>
+<h2 id="2-UIView和CALayer的frame"><a href="#2-UIView和CALayer的frame" class="headerlink" title="2.UIView和CALayer的frame"></a>2.UIView和CALayer的frame</h2><p>先来做个测试：</p>
 <p>自定义两个类，<code>CymView</code> 继承 <code>UIView</code>,<code>CymLayer</code>继承<code>CALayer</code></p>
 <p>然后在<code>CymView</code>中重写方法</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">+ (Class)layerClass</div><div class="line">&#123;</div><div class="line">    return [CymLayer class];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setFrame:(CGRect)frame</div><div class="line">&#123;</div><div class="line">    [super setFrame:frame];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setCenter:(CGPoint)center</div><div class="line">&#123;</div><div class="line">    [super setCenter:center];</div><div class="line">&#125;</div><div class="line"></div><div class="line">- (void)setBounds:(CGRect)bounds</div><div class="line">&#123;</div><div class="line">    [super setBounds:bounds];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
@@ -219,14 +209,12 @@ classes that you can use:
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">[UIView _createLayerWithFrame]</div><div class="line">[Layer setBounds:bounds]</div><div class="line">[UIView setFrame：Frame]</div><div class="line">[Layer setFrame:frame]</div><div class="line">[Layer setPosition:position]</div><div class="line">[Layer setBounds:bounds]</div></pre></td></tr></table></figure>
 <p>可以看出，在View创建的过程中只调用了Layer设置尺寸和位置的方法，并没有调用View的<code>setCenter</code>和<code>setBounds</code></p>
 <p>这个时候，我们来修改view的<code>bounds.size</code>和<code>bounds.orgin</code>,同样也只会调用Layer的方法，事实胜于雄辩，从这个例子中我们可以说View的Center和Bounds是直接返回Layer对应的Position和Bounds.</p>
-<p>##3.UIView是对显示内容的管理，CALayer是对显示内容的绘制</p>
-<p>在<code>CymView</code>和<code>CymLayer</code>中分别重写父类的方法,然后在下面两个方法加上断点</p>
+<h2 id="3-UIView是对显示内容的管理，CALayer是对显示内容的绘制"><a href="#3-UIView是对显示内容的管理，CALayer是对显示内容的绘制" class="headerlink" title="3.UIView是对显示内容的管理，CALayer是对显示内容的绘制"></a>3.UIView是对显示内容的管理，CALayer是对显示内容的绘制</h2><p>在<code>CymView</code>和<code>CymLayer</code>中分别重写父类的方法,然后在下面两个方法加上断点</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">[UIView drawRect:rect]; </div><div class="line"></div><div class="line">[CALayer display];</div></pre></td></tr></table></figure>
 <p>执行过后我们可以发现Xcode左侧的方法堆栈中有这样一行</p>
 <p><code>[UIView(CALayerDelegate) drawLayer:inContext:]</code></p>
 <p>也就是说，<code>UIView</code>是<code>CALayer</code>的CALayerDelegate.</p>
-<p>##4.ios中做动画时，修改非RootLayer的位置,背景色等属性的时候会默认产生隐式动画，而修改UIView则不会</p>
-<p>对于每一个 UIView 都有一个 layer,把这个 layer 且称作RootLayer,而不是 View 的根 Layer的叫做 非 RootLayer。我们对UIView的属性修改时时不会产生默认动画，而对单独 layer属性直接修改会，这个默认动画的时间缺省值是0.25s.<br>在 Core Animation 编程指南的 “How to Animate Layer-Backed Views” 中，对为什么会这样做出了一个解释：</p>
+<h2 id="4-ios中做动画时，修改非RootLayer的位置-背景色等属性的时候会默认产生隐式动画，而修改UIView则不会"><a href="#4-ios中做动画时，修改非RootLayer的位置-背景色等属性的时候会默认产生隐式动画，而修改UIView则不会" class="headerlink" title="4.ios中做动画时，修改非RootLayer的位置,背景色等属性的时候会默认产生隐式动画，而修改UIView则不会"></a>4.ios中做动画时，修改非RootLayer的位置,背景色等属性的时候会默认产生隐式动画，而修改UIView则不会</h2><p>对于每一个 UIView 都有一个 layer,把这个 layer 且称作RootLayer,而不是 View 的根 Layer的叫做 非 RootLayer。我们对UIView的属性修改时时不会产生默认动画，而对单独 layer属性直接修改会，这个默认动画的时间缺省值是0.25s.<br>在 Core Animation 编程指南的 “How to Animate Layer-Backed Views” 中，对为什么会这样做出了一个解释：</p>
 <blockquote>
 <p>UIView 默认情况下禁止了 layer 动画，但是在 animation block 中又重新启用了它们</p>
 </blockquote>
@@ -240,8 +228,7 @@ classes that you can use:
 </ol>
 </blockquote>
 <p>当 layer 在背后支持一个 view 的时候，view 就是它的 delegate；</p>
-<p>##总结</p>
-<ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
 <li><p>每个 UIView 内部都有一个 CALayer 在背后提供内容的绘制和显示，并且 UIView 的尺寸样式都由内部的 Layer 所提供。两者都有树状层级结构，layer 内部有 SubLayers，View 内部有 SubViews.但是 Layer 比 View 多了个AnchorPoint</p>
 </li>
 <li><p>在 View显示的时候，UIView 做为 Layer 的 CALayerDelegate,View 的显示内容由内部的 CALayer 的 display</p>
@@ -253,7 +240,7 @@ classes that you can use:
 <li><p>两者最明显的区别是 View可以接受并处理事件，而 Layer 不可以.</p>
 </li>
 </ul>
-<p>####参考链接<br><a href="http://www.jianshu.com/p/079e5cf0f014" target="_blank" rel="external">http://www.jianshu.com/p/079e5cf0f014</a>  </p>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a href="http://www.jianshu.com/p/079e5cf0f014" target="_blank" rel="external">http://www.jianshu.com/p/079e5cf0f014</a>  </p>
 
   </section>
 
